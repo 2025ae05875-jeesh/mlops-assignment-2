@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd /home/cloud/workspace/llmops_assignment2 || exit 1
+cd "$(dirname "$0")/.." || exit 1
 jupyter nbconvert --to html notebooks/2025ae05875_mlops_assignment_2.ipynb \
   --output LLMOps_Assignment2.html || exit 1
 if grep -E -q "(sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{30,}|gsk_[A-Za-z0-9]{20,})" \

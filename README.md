@@ -56,8 +56,8 @@ Create `.env` from the template (`cp .env.example .env`). `.env` is git-ignored 
 
 ## Installation
 ```bash
-git clone https://github.com/2025ae05875-jeesh/llmops_assignment2.git
-cd llmops_assignment2
+git clone https://github.com/2025ae05875-jeesh/mlops-assignment-2.git
+cd mlops-assignment-2
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt

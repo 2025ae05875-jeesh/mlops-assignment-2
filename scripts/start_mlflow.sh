@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Start the MLflow tracking server (SQLite backend + local artifact store) in the
 # background. Safe to re-run. UI: http://127.0.0.1:5000
-cd /home/cloud/workspace/llmops_assignment2 || exit 1
+cd "$(dirname "$0")/.." || exit 1
 if curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:5000/health | grep -q 200; then
   echo "MLflow server already running at http://127.0.0.1:5000"; exit 0
 fi

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Run at the start of EVERY lab session:   source scripts/session_setup.sh
-PROJECT=/home/cloud/workspace/llmops_assignment2
+PROJECT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VENV="$HOME/.venvs/llmops"
 cd "$PROJECT" || return 1
 if ! "$VENV/bin/python" -c "import eduassist, mlflow, openai, ipykernel" 2>/dev/null; then
